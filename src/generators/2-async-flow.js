@@ -14,14 +14,16 @@ function callAsync(value, callback) {
     setTimeout(() => callback(null, value));
 }
 
-describe("custom async flow", () => {
-    it("should let us write async code using a linear approach", done => {
-        asyncFlow(function* (callback) {
-            const a = yield callAsync(1, callback);
-            expect(a).toBe(1);
-            const b = yield callAsync(2, callback);
-            expect(b).toBe(2);
-            done();
+describe("generators", () => {
+    describe("custom async flow", () => {
+        it("should let us write async code using a linear approach", done => {
+            asyncFlow(function* (callback) {
+                const a = yield callAsync(1, callback);
+                expect(a).toBe(1);
+                const b = yield callAsync(2, callback);
+                expect(b).toBe(2);
+                done();
+            });
         });
     });
 });

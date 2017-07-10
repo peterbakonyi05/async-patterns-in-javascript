@@ -20,14 +20,16 @@ function callAsyncThunk(value) {
     };
 }
 
-describe("async flow using thunks", () => {
-    it("should let us write async code using a linear approach without passing callbacks", done => {
-        asyncFlowWithThunks(function* () {
-            const a = yield callAsyncThunk(1);
-            expect(a).toBe(1);
-            const b = yield callAsyncThunk(2);
-            expect(b).toBe(2);
-            done();
+describe("generators", () => {
+    describe("async flow using thunks", () => {
+        it("should let us write async code using a linear approach without passing callbacks", done => {
+            asyncFlowWithThunks(function* () {
+                const a = yield callAsyncThunk(1);
+                expect(a).toBe(1);
+                const b = yield callAsyncThunk(2);
+                expect(b).toBe(2);
+                done();
+            });
         });
     });
 });
