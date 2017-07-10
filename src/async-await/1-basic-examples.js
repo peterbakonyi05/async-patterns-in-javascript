@@ -1,4 +1,4 @@
-const { wrapAsync } = require("./jasmine-helper");
+const { wrapAsync } = require("./async-jasmine-helper");
 
 async function getValueAsync(value) {
     return Promise.resolve(value);
