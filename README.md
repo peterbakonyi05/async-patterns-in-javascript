@@ -11,3 +11,11 @@ npm 5
 npm install
 npm test
 ```
+
+## Async patterns
+* Callback
+* Observer
+* Promise
+* Generators
+* Async-await
+* RxJS
