@@ -13,9 +13,9 @@ npm test
 ```
 
 ## Async patterns
-* Callback
-* Observer
-* Promise
-* Generators
-* Async-await
-* RxJS
+1. Callback
+2. Observer
+3. Promise
+4. Generators
+5. Async-await
+6. RxJS

@@ -1,3 +1,5 @@
+// promise: pending, fulfilled, rejected
+// if it is fulfilled or rejected, it means it is settled
 function promisify(callbackBasedApi) {
     return function promisified() {
         const args = [].slice.call(arguments);
